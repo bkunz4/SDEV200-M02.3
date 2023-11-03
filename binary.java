@@ -1,4 +1,4 @@
-public class Exercise_09 {
+public class binary {
 
 
     public static void main(String[] args) {
