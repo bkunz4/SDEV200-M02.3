@@ -1,15 +1,17 @@
+//using exercise 12.7 to print out the decimal value of a binary string
 public class Exercise12_07 {
-	
+
   public static int bin2Dec(String binaryString) throws NumberFormatException {
 		
     int decimal = 0;
-		
+		//checks if the string is empty
     for (int i = 0, j = binaryString.length() - 1; 
 			i < binaryString.length(); i++, j--) {
-			
+
+      //checks if the input is valid and prints out an error message if it is not
       if (binaryString.charAt(i) < '0' || binaryString.charAt(i) > '1')
 				throw new NumberFormatException("The string is not a binary string");
-			decimal += (Integer.parseInt(String.valueOf(binaryString.charAt(i)))) 
+			decimal += (Integer.parseInt(String.valueOf(binaryString.charAt(i)))) //converts the character to an integer
 				* Math.pow(2, j);
 		}
 		return decimal;
